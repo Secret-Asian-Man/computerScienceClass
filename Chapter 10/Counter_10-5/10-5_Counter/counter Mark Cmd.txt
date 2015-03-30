@@ -1,0 +1,56 @@
+Increment (+), Decrement (-), Reset (r), Quit (q)
+count: 0
+Enter command: +
+count: 1
+Enter command: +
+count: 2
+Enter command: +
+count: 3
+Enter command: +
+count: 4
+Enter command: +
+count: 5
+Enter command: +
+count: 6
+Enter command: +
+count: 7
+Enter command: +
+count: 8
+Enter command: -
+count: 7
+Enter command: -
+count: 6
+Enter command: -
+count: 5
+Enter command: -
+count: 4
+Enter command: -
+count: 3
+Enter command: -
+count: 2
+Enter command: -
+count: 1
+Enter command: -
+count: 0
+Enter command: -
+count: 0
+Enter command: -
+count: 0
+Enter command: -
+count: 0
+Enter command: +
+count: 1
+Enter command: +
+count: 2
+Enter command: +
+count: 3
+Enter command: +
+count: 4
+Enter command: +
+count: 5
+Enter command: +
+count: 6
+Enter command: r
+count: 0
+Enter command: q
+Press <RETURN> to close this window...

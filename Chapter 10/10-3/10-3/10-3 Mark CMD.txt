@@ -1,0 +1,6 @@
+Enter account balance: 1000
+Enter account interest rate: 100
+Enter number of months until maturity (must be at or under 12 months): 5
+When your CD matures in 5 month(s),
+it will have a balance of $1416.67
+Press <RETURN> to close this window...

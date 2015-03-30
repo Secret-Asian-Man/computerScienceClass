@@ -1,0 +1,25 @@
+main array: 12345 6789
+DEBUG *pos1: 1
+DEBUG *pos2: 9
+main array: 9876 54321
+Press <RETURN> to close this window...
+
+main array: abcdefghijklmnopqrstuvwxyz
+DEBUG *pos1: a
+DEBUG *pos2: z
+main array: zyxwvutsrqponmlkjihgfedcba
+Press <RETURN> to close this window...
+
+
+main array: abc123
+DEBUG *pos1: a
+DEBUG *pos2: 3
+main array: 321cba
+Press <RETURN> to close this window...
+
+
+main array: quack                                       duck
+DEBUG *pos1: q
+DEBUG *pos2: k
+main array: kcud                                       kcauq
+Press <RETURN> to close this window...

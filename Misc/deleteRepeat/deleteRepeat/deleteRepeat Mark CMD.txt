@@ -1,0 +1,25 @@
+Original Array: -1 -1 -1 1 2 3 1 2 999
+
+DEBUG searchNext: found duplicate -1 at position 1
+-1 -1 -1 1 2 3 1 2 999
+DEBUG deleteRepeat: deleting duplicate -1 at position 1
+
+
+DEBUG searchNext: found duplicate -1 at position 1
+-1 -1 1 2 3 1 2 999
+DEBUG deleteRepeat: deleting duplicate -1 at position 1
+
+
+DEBUG searchNext: found duplicate 1 at position 4
+-1 1 2 3 1 2 999
+DEBUG deleteRepeat: deleting duplicate 1 at position 4
+
+
+DEBUG searchNext: found duplicate 2 at position 4
+-1 1 2 3 2 999
+DEBUG deleteRepeat: deleting duplicate 2 at position 4
+
+
+Modified Array: -1 1 2 3 999
+
+Press <RETURN> to close this window...

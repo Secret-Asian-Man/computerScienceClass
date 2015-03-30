@@ -1,0 +1,38 @@
+Ratio 1: 1/2
+Ratio 2: 5/8
+Input command: +
+9/8
+
+Input command: -
+-1/8
+
+Input command: *
+5/16
+
+Input command: /
+4/5
+
+Input command: 1
+Ratio 1: 56/152
+Input command: 2
+Ratio 2: -1523/1
+Input command: +
+-28930/19
+
+Input command: -
+28944/19
+
+Input command: *
+-10661/19
+
+Input command: /
+7/-28937
+
+Input command: 666
+invalid input...
+Input command: invalid input...
+Input command: invalid input...
+Input command: $
+invalid input...
+Input command: x
+Press <RETURN> to close this window...

@@ -1,0 +1,19 @@
+Testing constructors:
+It is month number 15, Enter 1-12
+
+Testing user entering invalid month "jzp":
+It is month number 0, Enter 1-12
+
+Testing user entering invalid month "25":
+It is month number 25, Enter 1-12
+
+Testing entering "jul":
+It is month number 7, jul
+
+Testing default constructor:
+It is month number 1, jan
+
+Testing set month using number:
+It is month number 8, aug
+
+Press <RETURN> to close this window...

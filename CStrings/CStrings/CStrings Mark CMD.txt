@@ -1,0 +1,26 @@
+Original destination array: food595
+Modified destination array: blah911blech
+
+
+
+blah911blech
+The length of source array is:12
+
+
+
+(Need to fix) Source (blah911blech) concatinated with destination (blah911blech)
+ is:
+blah911blech
+blah911blech
+
+
+
+The letter a, in blah911blech is at position: 2
+
+
+
+Using the list 0123456789 I can tell the digits in blah911blech
+starts at position 4 and ends at position 7
+
+
+Press <RETURN> to close this window...

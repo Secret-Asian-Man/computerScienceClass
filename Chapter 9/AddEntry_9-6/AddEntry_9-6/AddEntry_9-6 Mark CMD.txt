@@ -1,0 +1,41 @@
+
+-Tesing deleteEntry- (deleting "22")
+DEBUG strPointer@@: 1
+DEBUG strPointer@@: 333
+DEBUG strPointer@@: 4444
+DEBUG strPointer@@: 55555
+Press <RETURN> to close this window...
+
+
+-Tesing deleteEntry- (deleting "4444")
+DEBUG strPointer@@: 1
+DEBUG strPointer@@: 22
+DEBUG strPointer@@: 333
+DEBUG strPointer@@: 55555
+Press <RETURN> to close this window...
+
+
+-Tesing deleteEntry- (deleting "65235")
+NULL detected
+Press <RETURN> to close this window...
+
+
+-Tesing addEntry- (adding "this is a new entry")
+DEBUG strPointer@@: 1
+DEBUG strPointer@@: 22
+DEBUG strPointer@@: 333
+DEBUG strPointer@@: 4444
+DEBUG strPointer@@: 55555
+DEBUG strPointer@@: this is a new entry
+Press <RETURN> to close this window...
+
+
+-Tesing addEntry- (adding "more new entries!")
+DEBUG strPointer@@: 1
+DEBUG strPointer@@: 22
+DEBUG strPointer@@: 333
+DEBUG strPointer@@: 4444
+DEBUG strPointer@@: 55555
+DEBUG strPointer@@: this is a new entry
+DEBUG strPointer@@: more new entries!
+Press <RETURN> to close this window...

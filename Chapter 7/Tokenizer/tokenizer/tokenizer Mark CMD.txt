@@ -1,0 +1,11 @@
+type 1 :Test
+type 0 :
+type 2 :123
+type 0 :
+type 1 :blah
+type 0 :
+type 1 :blahs
+type 3 :!@#
+DONE!!
+
+Press <RETURN> to close this window...

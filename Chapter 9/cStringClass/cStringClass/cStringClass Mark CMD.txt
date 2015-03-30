@@ -1,0 +1,116 @@
+constructor
+0x28fe70
+1234
+size: 4
+capacity: 4
+
+
+
+copy
+0x28fe70
+4594450qwa544737ertyuio9pasdfghjklzx9cvbnm
+size: 42
+capacity: 64
+
+
+
+concatenate
+0x28fe70
+4594450qwa544737ertyuio9pasdfghjklzx9cvbnm1234
+size: 46
+capacity: 64
+
+
+
+.compare: 0
+
+
+
+.character: 234
+
+
+
+0x28fe70
+4594450qwa544737ertyuio9pasdfghjklzx9cvbnm1234p
+size: 47
+capacity: 64
+
+
+
+clear
+0x28fe70
+
+size: 0
+capacity: 2
+
+
+
+isEmpty
+IS EMPTY!
+
+
+
+assign
+0x28fe70
+4594450qwa544737ertyuio9pasdfghjklzx9cvbnm
+size: 42
+capacity: 64
+
+
+
+isEmpty
+IS NOT EMPTY!
+
+
+
+erase
+0x28fe70
+45qwa544737ertyuio9pasdfghjklzx9cvbnmmmmmm
+size: 42
+capacity: 64
+
+
+
+find
+0x28fe70
+45qwa544737ertyuio9pasdfghjklzx9cvbnmmmmmm
+FOUND AT: 9pasdfghjklzx9cvbnmmmmmm
+size: 42
+capacity: 64
+
+
+
+rFind
+0x28fe70
+45qwa544737ertyuio9pasdfghjklzx9cvbnmmmmmm
+FOUND AT: 9cvbnmmmmmm
+size: 42
+capacity: 64
+
+
+
+findFirstOf
+0x28fe70
+qwa544737ertyuio9pasdfghjklzx9cvbnmmmmmm
+size: 42
+capacity: 64
+
+
+
+findFirstNotOf
+0x28fe70
+44737ertyuio9pasdfghjklzx9cvbnmmmmmm
+size: 42
+capacity: 64
+
+
+
+= operator
+address before 2: 0x28fe64
+address before 3: 0x28fe58
+address after 2: 0x28fe64
+address after 3: 0x28fe58
+fwoofie
+size: 7
+capacity: 8
+Press <RETURN> to close this window...

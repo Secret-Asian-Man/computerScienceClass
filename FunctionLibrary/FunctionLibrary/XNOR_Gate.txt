@@ -1,0 +1,30 @@
+bool xnorGate=true; // if this ever becomes false, it stays false.
+
+
+
+if (CONDITION && xnorGate==true)
+       	xnorGate=true;
+
+   else
+        xnorGate=false;
+
+if (CONDITION && xnorGate==true)
+       	xnorGate=true;
+
+   else
+        xnorGate=false;
+
+if (CONDITION && xnorGate==true)
+       	xnorGate=true;
+
+   else
+        xnorGate=false;
+
+
+
+
+    if (xnorGate)
+        return true;
+
+    else
+        return false;

@@ -1,0 +1,585 @@
+DEBUG deleteRepeat key: aabbcc123123abc
+DEBUG deleteRepeat found: abbcc123123abc
+DEBUG deleteRepeat deleted: bbcc123123abc
+DEBUG OVERVIEW: abbcc123123abc
+
+
+
+DEBUG deleteRepeat key: abbcc123123abc
+DEBUG deleteRepeat found: abc
+DEBUG deleteRepeat deleted: bc
+DEBUG OVERVIEW: abbcc123123bc
+
+
+
+DEBUG deleteRepeat key: abbcc123123bc
+NOT FOUND!!
+DEBUG OVERVIEW: abbcc123123bc
+
+
+
+DEBUG deleteRepeat key: bbcc123123bc
+DEBUG deleteRepeat found: bcc123123bc
+DEBUG deleteRepeat deleted: cc123123bc
+DEBUG OVERVIEW: abcc123123bc
+
+
+
+DEBUG deleteRepeat key: bcc123123bc
+DEBUG deleteRepeat found: bc
+DEBUG deleteRepeat deleted: c
+DEBUG OVERVIEW: abcc123123c
+
+
+
+DEBUG deleteRepeat key: bcc123123c
+NOT FOUND!!
+DEBUG OVERVIEW: abcc123123c
+
+
+
+DEBUG deleteRepeat key: cc123123c
+DEBUG deleteRepeat found: c123123c
+DEBUG deleteRepeat deleted: 123123c
+DEBUG OVERVIEW: abc123123c
+
+
+
+DEBUG deleteRepeat key: c123123c
+DEBUG deleteRepeat found: c
+DEBUG deleteRepeat deleted:
+DEBUG OVERVIEW: abc123123
+
+
+
+DEBUG deleteRepeat key: c123123
+NOT FOUND!!
+DEBUG OVERVIEW: abc123123
+
+
+
+DEBUG deleteRepeat key: 123123
+DEBUG deleteRepeat found: 123
+DEBUG deleteRepeat deleted: 23
+DEBUG OVERVIEW: abc12323
+
+
+
+DEBUG deleteRepeat key: 12323
+NOT FOUND!!
+DEBUG OVERVIEW: abc12323
+
+
+
+DEBUG deleteRepeat key: 2323
+DEBUG deleteRepeat found: 23
+DEBUG deleteRepeat deleted: 3
+DEBUG OVERVIEW: abc1233
+
+
+
+DEBUG deleteRepeat key: 233
+NOT FOUND!!
+DEBUG OVERVIEW: abc1233
+
+
+
+DEBUG deleteRepeat key: 33
+DEBUG deleteRepeat found: 3
+DEBUG deleteRepeat deleted:
+DEBUG OVERVIEW: abc123
+
+
+
+DEBUG deleteRepeat key: 3
+NOT FOUND!!
+DEBUG OVERVIEW: abc123
+
+
+
+Press <RETURN> to close this window...
+
+DEBUG deleteRepeat key: Twinkle twinkle little star!
+NOT FOUND!!
+DEBUG OVERVIEW: Twinkle twinkle little star!
+
+
+
+DEBUG deleteRepeat key: winkle twinkle little star!
+DEBUG deleteRepeat found: winkle little star!
+DEBUG deleteRepeat deleted: inkle little star!
+DEBUG OVERVIEW: Twinkle tinkle little star!
+
+
+
+DEBUG deleteRepeat key: winkle tinkle little star!
+NOT FOUND!!
+DEBUG OVERVIEW: Twinkle tinkle little star!
+
+
+
+DEBUG deleteRepeat key: inkle tinkle little star!
+DEBUG deleteRepeat found: inkle little star!
+DEBUG deleteRepeat deleted: nkle little star!
+DEBUG OVERVIEW: Twinkle tnkle little star!
+
+
+
+DEBUG deleteRepeat key: inkle tnkle little star!
+DEBUG deleteRepeat found: ittle star!
+DEBUG deleteRepeat deleted: ttle star!
+DEBUG OVERVIEW: Twinkle tnkle lttle star!
+
+
+
+DEBUG deleteRepeat key: inkle tnkle lttle star!
+NOT FOUND!!
+DEBUG OVERVIEW: Twinkle tnkle lttle star!
+
+
+
+DEBUG deleteRepeat key: nkle tnkle lttle star!
+DEBUG deleteRepeat found: nkle lttle star!
+DEBUG deleteRepeat deleted: kle lttle star!
+DEBUG OVERVIEW: Twinkle tkle lttle star!
+
+
+
+DEBUG deleteRepeat key: nkle tkle lttle star!
+NOT FOUND!!
+DEBUG OVERVIEW: Twinkle tkle lttle star!
+
+
+
+DEBUG deleteRepeat key: kle tkle lttle star!
+DEBUG deleteRepeat found: kle lttle star!
+DEBUG deleteRepeat deleted: le lttle star!
+DEBUG OVERVIEW: Twinkle tle lttle star!
+
+
+
+DEBUG deleteRepeat key: kle tle lttle star!
+NOT FOUND!!
+DEBUG OVERVIEW: Twinkle tle lttle star!
+
+
+
+DEBUG deleteRepeat key: le tle lttle star!
+DEBUG deleteRepeat found: le lttle star!
+DEBUG deleteRepeat deleted: e lttle star!
+DEBUG OVERVIEW: Twinkle te lttle star!
+
+
+
+DEBUG deleteRepeat key: le te lttle star!
+DEBUG deleteRepeat found: lttle star!
+DEBUG deleteRepeat deleted: ttle star!
+DEBUG OVERVIEW: Twinkle te ttle star!
+
+
+
+DEBUG deleteRepeat key: le te ttle star!
+DEBUG deleteRepeat found: le star!
+DEBUG deleteRepeat deleted: e star!
+DEBUG OVERVIEW: Twinkle te tte star!
+
+
+
+DEBUG deleteRepeat key: le te tte star!
+NOT FOUND!!
+DEBUG OVERVIEW: Twinkle te tte star!
+
+
+
+DEBUG deleteRepeat key: e te tte star!
+DEBUG deleteRepeat found: e tte star!
+DEBUG deleteRepeat deleted:  tte star!
+DEBUG OVERVIEW: Twinkle t tte star!
+
+
+
+DEBUG deleteRepeat key: e t tte star!
+DEBUG deleteRepeat found: e star!
+DEBUG deleteRepeat deleted:  star!
+DEBUG OVERVIEW: Twinkle t tt star!
+
+
+
+DEBUG deleteRepeat key: e t tt star!
+NOT FOUND!!
+DEBUG OVERVIEW: Twinkle t tt star!
+
+
+
+DEBUG deleteRepeat key:  t tt star!
+DEBUG deleteRepeat found:  tt star!
+DEBUG deleteRepeat deleted: tt star!
+DEBUG OVERVIEW: Twinkle ttt star!
+
+
+
+DEBUG deleteRepeat key:  ttt star!
+DEBUG deleteRepeat found:  star!
+DEBUG deleteRepeat deleted: star!
+DEBUG OVERVIEW: Twinkle tttstar!
+
+
+
+DEBUG deleteRepeat key:  tttstar!
+NOT FOUND!!
+DEBUG OVERVIEW: Twinkle tttstar!
+
+
+
+DEBUG deleteRepeat key: tttstar!
+DEBUG deleteRepeat found: ttstar!
+DEBUG deleteRepeat deleted: tstar!
+DEBUG OVERVIEW: Twinkle ttstar!
+
+
+
+DEBUG deleteRepeat key: ttstar!
+DEBUG deleteRepeat found: tstar!
+DEBUG deleteRepeat deleted: star!
+DEBUG OVERVIEW: Twinkle tstar!
+
+
+
+DEBUG deleteRepeat key: tstar!
+DEBUG deleteRepeat found: tar!
+DEBUG deleteRepeat deleted: ar!
+DEBUG OVERVIEW: Twinkle tsar!
+
+
+
+DEBUG deleteRepeat key: tsar!
+NOT FOUND!!
+DEBUG OVERVIEW: Twinkle tsar!
+
+
+
+DEBUG deleteRepeat key: sar!
+NOT FOUND!!
+DEBUG OVERVIEW: Twinkle tsar!
+
+
+
+DEBUG deleteRepeat key: ar!
+NOT FOUND!!
+DEBUG OVERVIEW: Twinkle tsar!
+
+
+
+DEBUG deleteRepeat key: r!
+NOT FOUND!!
+DEBUG OVERVIEW: Twinkle tsar!
+
+
+
+DEBUG deleteRepeat key: !
+NOT FOUND!!
+DEBUG OVERVIEW: Twinkle tsar!
+
+
+
+Press <RETURN> to close this window...
+
+DEBUG deleteRepeat deleted: miibi95191 981w9WE 91E9 G1W1 9 1W E9G816d51
+DEBUG OVERVIEW: unegalfor%#($&@miibi95191 981w9WE 91E9 G1W1 9 1W E9G816d51
+
+
+
+DEBUG deleteRepeat key: @miibi95191 981w9WE 91E9 G1W1 9 1W E9G816d51
+NOT FOUND!!
+DEBUG OVERVIEW: unegalfor%#($&@miibi95191 981w9WE 91E9 G1W1 9 1W E9G816d51
+
+
+
+DEBUG deleteRepeat key: miibi95191 981w9WE 91E9 G1W1 9 1W E9G816d51
+NOT FOUND!!
+DEBUG OVERVIEW: unegalfor%#($&@miibi95191 981w9WE 91E9 G1W1 9 1W E9G816d51
+
+
+
+DEBUG deleteRepeat key: iibi95191 981w9WE 91E9 G1W1 9 1W E9G816d51
+DEBUG deleteRepeat found: ibi95191 981w9WE 91E9 G1W1 9 1W E9G816d51
+DEBUG deleteRepeat deleted: bi95191 981w9WE 91E9 G1W1 9 1W E9G816d51
+DEBUG OVERVIEW: unegalfor%#($&@mibi95191 981w9WE 91E9 G1W1 9 1W E9G816d51
+
+
+
+DEBUG deleteRepeat key: ibi95191 981w9WE 91E9 G1W1 9 1W E9G816d51
+DEBUG deleteRepeat found: i95191 981w9WE 91E9 G1W1 9 1W E9G816d51
+DEBUG deleteRepeat deleted: 95191 981w9WE 91E9 G1W1 9 1W E9G816d51
+DEBUG OVERVIEW: unegalfor%#($&@mib95191 981w9WE 91E9 G1W1 9 1W E9G816d51
+
+
+
+DEBUG deleteRepeat key: ib95191 981w9WE 91E9 G1W1 9 1W E9G816d51
+NOT FOUND!!
+DEBUG OVERVIEW: unegalfor%#($&@mib95191 981w9WE 91E9 G1W1 9 1W E9G816d51
+
+
+
+DEBUG deleteRepeat key: b95191 981w9WE 91E9 G1W1 9 1W E9G816d51
+NOT FOUND!!
+DEBUG OVERVIEW: unegalfor%#($&@mib95191 981w9WE 91E9 G1W1 9 1W E9G816d51
+
+
+
+DEBUG deleteRepeat key: 95191 981w9WE 91E9 G1W1 9 1W E9G816d51
+DEBUG deleteRepeat found: 91 981w9WE 91E9 G1W1 9 1W E9G816d51
+DEBUG deleteRepeat deleted: 1 981w9WE 91E9 G1W1 9 1W E9G816d51
+DEBUG OVERVIEW: unegalfor%#($&@mib9511 981w9WE 91E9 G1W1 9 1W E9G816d51
+
+
+
+DEBUG deleteRepeat key: 9511 981w9WE 91E9 G1W1 9 1W E9G816d51
+DEBUG deleteRepeat found: 981w9WE 91E9 G1W1 9 1W E9G816d51
+DEBUG deleteRepeat deleted: 81w9WE 91E9 G1W1 9 1W E9G816d51
+DEBUG OVERVIEW: unegalfor%#($&@mib9511 81w9WE 91E9 G1W1 9 1W E9G816d51
+
+
+
+DEBUG deleteRepeat key: 9511 81w9WE 91E9 G1W1 9 1W E9G816d51
+DEBUG deleteRepeat found: 9WE 91E9 G1W1 9 1W E9G816d51
+DEBUG deleteRepeat deleted: WE 91E9 G1W1 9 1W E9G816d51
+DEBUG OVERVIEW: unegalfor%#($&@mib9511 81wWE 91E9 G1W1 9 1W E9G816d51
+
+
+
+DEBUG deleteRepeat key: 9511 81wWE 91E9 G1W1 9 1W E9G816d51
+DEBUG deleteRepeat found: 91E9 G1W1 9 1W E9G816d51
+DEBUG deleteRepeat deleted: 1E9 G1W1 9 1W E9G816d51
+DEBUG OVERVIEW: unegalfor%#($&@mib9511 81wWE 1E9 G1W1 9 1W E9G816d51
+
+
+
+DEBUG deleteRepeat key: 9511 81wWE 1E9 G1W1 9 1W E9G816d51
+DEBUG deleteRepeat found: 9 G1W1 9 1W E9G816d51
+DEBUG deleteRepeat deleted:  G1W1 9 1W E9G816d51
+DEBUG OVERVIEW: unegalfor%#($&@mib9511 81wWE 1E G1W1 9 1W E9G816d51
+
+
+
+DEBUG deleteRepeat key: 9511 81wWE 1E G1W1 9 1W E9G816d51
+DEBUG deleteRepeat found: 9 1W E9G816d51
+DEBUG deleteRepeat deleted:  1W E9G816d51
+DEBUG OVERVIEW: unegalfor%#($&@mib9511 81wWE 1E G1W1  1W E9G816d51
+
+
+
+DEBUG deleteRepeat key: 9511 81wWE 1E G1W1  1W E9G816d51
+DEBUG deleteRepeat found: 9G816d51
+DEBUG deleteRepeat deleted: G816d51
+DEBUG OVERVIEW: unegalfor%#($&@mib9511 81wWE 1E G1W1  1W EG816d51
+
+
+
+DEBUG deleteRepeat key: 9511 81wWE 1E G1W1  1W EG816d51
+NOT FOUND!!
+DEBUG OVERVIEW: unegalfor%#($&@mib9511 81wWE 1E G1W1  1W EG816d51
+
+
+
+DEBUG deleteRepeat key: 511 81wWE 1E G1W1  1W EG816d51
+DEBUG deleteRepeat found: 51
+DEBUG deleteRepeat deleted: 1
+DEBUG OVERVIEW: unegalfor%#($&@mib9511 81wWE 1E G1W1  1W EG816d1
+
+
+
+DEBUG deleteRepeat key: 511 81wWE 1E G1W1  1W EG816d1
+NOT FOUND!!
+DEBUG OVERVIEW: unegalfor%#($&@mib9511 81wWE 1E G1W1  1W EG816d1
+
+
+
+DEBUG deleteRepeat key: 11 81wWE 1E G1W1  1W EG816d1
+DEBUG deleteRepeat found: 1 81wWE 1E G1W1  1W EG816d1
+DEBUG deleteRepeat deleted:  81wWE 1E G1W1  1W EG816d1
+DEBUG OVERVIEW: unegalfor%#($&@mib951 81wWE 1E G1W1  1W EG816d1
+
+
+
+DEBUG deleteRepeat key: 1 81wWE 1E G1W1  1W EG816d1
+DEBUG deleteRepeat found: 1wWE 1E G1W1  1W EG816d1
+DEBUG deleteRepeat deleted: wWE 1E G1W1  1W EG816d1
+DEBUG OVERVIEW: unegalfor%#($&@mib951 8wWE 1E G1W1  1W EG816d1
+
+
+
+DEBUG deleteRepeat key: 1 8wWE 1E G1W1  1W EG816d1
+DEBUG deleteRepeat found: 1E G1W1  1W EG816d1
+DEBUG deleteRepeat deleted: E G1W1  1W EG816d1
+DEBUG OVERVIEW: unegalfor%#($&@mib951 8wWE E G1W1  1W EG816d1
+
+
+
+DEBUG deleteRepeat key: 1 8wWE E G1W1  1W EG816d1
+DEBUG deleteRepeat found: 1W1  1W EG816d1
+DEBUG deleteRepeat deleted: W1  1W EG816d1
+DEBUG OVERVIEW: unegalfor%#($&@mib951 8wWE E GW1  1W EG816d1
+
+
+
+DEBUG deleteRepeat key: 1 8wWE E GW1  1W EG816d1
+DEBUG deleteRepeat found: 1  1W EG816d1
+DEBUG deleteRepeat deleted:   1W EG816d1
+DEBUG OVERVIEW: unegalfor%#($&@mib951 8wWE E GW  1W EG816d1
+
+
+
+DEBUG deleteRepeat key: 1 8wWE E GW  1W EG816d1
+DEBUG deleteRepeat found: 1W EG816d1
+DEBUG deleteRepeat deleted: W EG816d1
+DEBUG OVERVIEW: unegalfor%#($&@mib951 8wWE E GW  W EG816d1
+
+
+
+DEBUG deleteRepeat key: 1 8wWE E GW  W EG816d1
+DEBUG deleteRepeat found: 16d1
+DEBUG deleteRepeat deleted: 6d1
+DEBUG OVERVIEW: unegalfor%#($&@mib951 8wWE E GW  W EG86d1
+
+
+
+DEBUG deleteRepeat key: 1 8wWE E GW  W EG86d1
+DEBUG deleteRepeat found: 1
+DEBUG deleteRepeat deleted:
+DEBUG OVERVIEW: unegalfor%#($&@mib951 8wWE E GW  W EG86d
+
+
+
+DEBUG deleteRepeat key: 1 8wWE E GW  W EG86d
+NOT FOUND!!
+DEBUG OVERVIEW: unegalfor%#($&@mib951 8wWE E GW  W EG86d
+
+
+
+DEBUG deleteRepeat key:  8wWE E GW  W EG86d
+DEBUG deleteRepeat found:  E GW  W EG86d
+DEBUG deleteRepeat deleted: E GW  W EG86d
+DEBUG OVERVIEW: unegalfor%#($&@mib951 8wWEE GW  W EG86d
+
+
+
+DEBUG deleteRepeat key:  8wWEE GW  W EG86d
+DEBUG deleteRepeat found:  GW  W EG86d
+DEBUG deleteRepeat deleted: GW  W EG86d
+DEBUG OVERVIEW: unegalfor%#($&@mib951 8wWEEGW  W EG86d
+
+
+
+DEBUG deleteRepeat key:  8wWEEGW  W EG86d
+DEBUG deleteRepeat found:   W EG86d
+DEBUG deleteRepeat deleted:  W EG86d
+DEBUG OVERVIEW: unegalfor%#($&@mib951 8wWEEGW W EG86d
+
+
+
+DEBUG deleteRepeat key:  8wWEEGW W EG86d
+DEBUG deleteRepeat found:  W EG86d
+DEBUG deleteRepeat deleted: W EG86d
+DEBUG OVERVIEW: unegalfor%#($&@mib951 8wWEEGWW EG86d
+
+
+
+DEBUG deleteRepeat key:  8wWEEGWW EG86d
+DEBUG deleteRepeat found:  EG86d
+DEBUG deleteRepeat deleted: EG86d
+DEBUG OVERVIEW: unegalfor%#($&@mib951 8wWEEGWWEG86d
+
+
+
+DEBUG deleteRepeat key:  8wWEEGWWEG86d
+NOT FOUND!!
+DEBUG OVERVIEW: unegalfor%#($&@mib951 8wWEEGWWEG86d
+
+
+
+DEBUG deleteRepeat key: 8wWEEGWWEG86d
+DEBUG deleteRepeat found: 86d
+DEBUG deleteRepeat deleted: 6d
+DEBUG OVERVIEW: unegalfor%#($&@mib951 8wWEEGWWEG6d
+
+
+
+DEBUG deleteRepeat key: 8wWEEGWWEG6d
+NOT FOUND!!
+DEBUG OVERVIEW: unegalfor%#($&@mib951 8wWEEGWWEG6d
+
+
+
+DEBUG deleteRepeat key: wWEEGWWEG6d
+NOT FOUND!!
+DEBUG OVERVIEW: unegalfor%#($&@mib951 8wWEEGWWEG6d
+
+
+
+DEBUG deleteRepeat key: WEEGWWEG6d
+DEBUG deleteRepeat found: WWEG6d
+DEBUG deleteRepeat deleted: WEG6d
+DEBUG OVERVIEW: unegalfor%#($&@mib951 8wWEEGWEG6d
+
+
+
+DEBUG deleteRepeat key: WEEGWEG6d
+DEBUG deleteRepeat found: WEG6d
+DEBUG deleteRepeat deleted: EG6d
+DEBUG OVERVIEW: unegalfor%#($&@mib951 8wWEEGEG6d
+
+
+
+DEBUG deleteRepeat key: WEEGEG6d
+NOT FOUND!!
+DEBUG OVERVIEW: unegalfor%#($&@mib951 8wWEEGEG6d
+
+
+
+DEBUG deleteRepeat key: EEGEG6d
+DEBUG deleteRepeat found: EGEG6d
+DEBUG deleteRepeat deleted: GEG6d
+DEBUG OVERVIEW: unegalfor%#($&@mib951 8wWEGEG6d
+
+
+
+DEBUG deleteRepeat key: EGEG6d
+DEBUG deleteRepeat found: EG6d
+DEBUG deleteRepeat deleted: G6d
+DEBUG OVERVIEW: unegalfor%#($&@mib951 8wWEGG6d
+
+
+
+DEBUG deleteRepeat key: EGG6d
+NOT FOUND!!
+DEBUG OVERVIEW: unegalfor%#($&@mib951 8wWEGG6d
+
+
+
+DEBUG deleteRepeat key: GG6d
+DEBUG deleteRepeat found: G6d
+DEBUG deleteRepeat deleted: 6d
+DEBUG OVERVIEW: unegalfor%#($&@mib951 8wWEG6d
+
+
+
+DEBUG deleteRepeat key: G6d
+NOT FOUND!!
+DEBUG OVERVIEW: unegalfor%#($&@mib951 8wWEG6d
+
+
+
+DEBUG deleteRepeat key: 6d
+NOT FOUND!!
+DEBUG OVERVIEW: unegalfor%#($&@mib951 8wWEG6d
+
+
+
+DEBUG deleteRepeat key: d
+NOT FOUND!!
+DEBUG OVERVIEW: unegalfor%#($&@mib951 8wWEG6d
+
+
+
+Press <RETURN> to close this window...
