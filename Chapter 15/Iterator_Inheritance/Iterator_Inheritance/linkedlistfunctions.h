@@ -1,7 +1,9 @@
+//Note: don't use Iterators in the lowest level functions, only in the list class.
+
+
 #ifndef LINKEDLISTFUNCTIONS_H
 #define LINKEDLISTFUNCTIONS_H
 #include "node.h"
-#include "iterator.h"
 
 template<typename T>
 void print(node<T>* head);
@@ -519,7 +521,7 @@ void reverse(node<T>*& head)
 * Notes:
 ************************************/
 template<typename T>
-Iterator<T> walker(node<T>* head, int distance)
+node<T>* walker(node<T>* head, int distance)
 {
     if (distance<nodeCount(head) && distance>=0)
     {
@@ -530,7 +532,7 @@ Iterator<T> walker(node<T>* head, int distance)
             headWalker=headWalker->next;
         }
 
-        return Iterator<T>(headWalker);
+        return headWalker;
     }
     else
     {
@@ -669,7 +671,7 @@ void eraseAll(node<T>*& head)
 * Notes:
 ************************************/
 template<typename T>
-Iterator<T> uniqueMerge(node<T>*& A,  node<T>*& B)
+node<T>* uniqueMerge(node<T>*& A,  node<T>*& B)
 {
     node<T>* AWalker=A;
     node<T>* BWalker=B;
@@ -723,7 +725,7 @@ Iterator<T> uniqueMerge(node<T>*& A,  node<T>*& B)
 
     reverse(temp); //when everything is done reverse store, cuz everything is inserted backwards
 
-    return Iterator<T>(temp);
+    return temp;
 
 }
 

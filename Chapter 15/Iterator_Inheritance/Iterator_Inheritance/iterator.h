@@ -1,11 +1,15 @@
-#ifndef ITERATOR_H
-#define ITERATOR_H
+#ifndef ITERATOR_H_INCLUDED
+#define ITERATOR_H_INCLUDED
 #include "node.h"
 
 template<typename T>
 class Iterator
 {
+
 public:
+
+    template<typename TT>
+    friend class list;
 
     //constructors
     Iterator();
@@ -17,9 +21,8 @@ public:
     //functions
     T data();
 
-
-    template <typename TT>
-    friend class list;
+    //operators
+    //Iterator ==(const Iterator& other);
 
 private:
     node<T>* _it;

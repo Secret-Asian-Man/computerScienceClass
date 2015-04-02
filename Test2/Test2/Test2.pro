@@ -4,12 +4,11 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    point.cpp
+    random.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
 
 HEADERS += \
-    mycstrings.h \
-    point.h
+    random.h
 

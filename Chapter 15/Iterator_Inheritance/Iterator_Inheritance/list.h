@@ -1,3 +1,7 @@
+//note: change ALL the node<T>* to Iterator<T>
+//The functions will take in a Iterator<T>, convert it to a node<T>*, process, convert it back to a Iterator<T>, then finally return the iterator<T>
+//Convert Iterators<T> into node<T>* by accessing the Iterator's
+
 #ifndef LIST_H
 #define LIST_H
 #include "node.h"
@@ -10,7 +14,7 @@ class list
 public:
     //constructors
     list();
-    list(node<T>* head);
+    list(Iterator<T> head);
     list(const list& other); //BIG 3:copy constructor (DONE!)
     list(T input);
     ~list();//BIG 3:destructor (DONE!)
@@ -23,16 +27,16 @@ public:
     void _print();
     Iterator<T> _walker(int distance);
     Iterator<T> _search(T key);
-    Iterator<T> _findPrevious(node<T>*position);
+    Iterator<T> _findPrevious(Iterator<T>position);
     void _printAll();
-    void _deleteNode(node<T>* position);
+    void _deleteNode(Iterator<T> position);
     void _deleteNode(T type);
     void _insertHead( T number);
-    void _insertAfter(node<T>* position, T input);
-    void _insertBefore( node<T>* position, T input);
+    void _insertAfter(Iterator<T> position, T input);
+    void _insertBefore( Iterator<T> position, T input);
     int _nodeCount();
     void _insertSort(T input);
-    void _swap(node<T>*& A, node<T>*& B);
+    void _swap(Iterator<T>& A, Iterator<T>& B);
     T _at(int pos);
     void _reverse();
     void _deleteRepeat();
@@ -40,7 +44,7 @@ public:
     void _copy(list source); //still needs testing
     void _eraseAll();
 
-    T operator [](int pos); //runs _at
+    T& operator [](int pos); //runs _at
     void friend operator +=(list& destination,const list& other);
     list& operator =(const list& other); //BIG 3: = operator (done?)
 //    void friend operator =(list& destination, const list& source);
@@ -59,7 +63,7 @@ list<T>::list()
 }
 
 template<typename T>
-list<T>::list(node<T>* head)
+list<T>::list(Iterator<T> head)
 {
     _head=NULL;
     copy(head,_head);
@@ -112,9 +116,9 @@ Iterator<T> list<T>::_search(T key)
 }
 
 template<typename T>
-Iterator<T> list<T>::_findPrevious(node<T>* position)
+Iterator<T> list<T>::_findPrevious(Iterator<T> position)
 {
-    return Iterator<T>(findPrevious(_head,position));
+    return Iterator<T>(findPrevious(_head,position._it));
 }
 
 template<typename T>
@@ -124,9 +128,9 @@ void list<T>::_printAll()
 }
 
 template<typename T>
-void list<T>::_deleteNode(node<T>* position)
+void list<T>::_deleteNode(Iterator<T> position)
 {
-    deleteNode(_head,position);
+    deleteNode(_head,position._it);
 }
 
 template<typename T>
@@ -143,15 +147,15 @@ void list<T>::_insertHead( T number)
 }
 
 template<typename T>
-void list<T>::_insertAfter(node<T>* position, T input)
+void list<T>::_insertAfter(Iterator<T> position, T input)
 {
-    insertAfter(_head,position,input);
+    insertAfter(_head,position._it,input);
 }
 
 template<typename T>
-void list<T>::_insertBefore( node<T>* position, T input)
+void list<T>::_insertBefore( Iterator<T> position, T input)
 {
-    insertBefore(_head,position,input);
+    insertBefore(_head,position._it,input);
 }
 
 template<typename T>
@@ -167,9 +171,9 @@ void list<T>::_insertSort(T input)
 }
 
 template<typename T>
-void list<T>::_swap(node<T>*& A, node<T>*& B)
+void list<T>::_swap(Iterator<T>& A, Iterator<T>& B)
 {
-    swap(A,B);
+    swap(A._it,B._it);
 }
 
 template<typename T>
@@ -204,7 +208,7 @@ void list<T>::_eraseAll()
 }
 
 template<typename T>
-T list<T>::operator [](int pos)
+T& list<T>::operator [](int pos)
 {
     return _at(pos);
 }
@@ -212,17 +216,17 @@ T list<T>::operator [](int pos)
 template<typename T>
 void operator +=(list<T>& destination, const list<T>& source)
 {
-    node<T>* destinationEnd=walker(destination._head,nodeCount(destination._head)-1); //at the last node of itself
-    node<T>* sourceWalker=source._head;
+    Iterator<T> destinationEnd=walker(destination._head,nodeCount(destination._head)-1); //at the last node of itself
+    Iterator<T> sourceWalker=source._head;
 
     while(sourceWalker!=NULL)
     {
-        insertAfter(destination._head,destinationEnd,sourceWalker->_item);
+        insertAfter(destination._head,destinationEnd._it,sourceWalker._it->_item);
 
         destinationEnd=walker(destination._head,nodeCount(destination._head)-1); //WARNING: taking advantage of exception in walker() function, ignore warning!
         //sets to the new last node
         //destinationEnd=destinationEnd->next; //sets the end to the new end
-        sourceWalker=sourceWalker->next;
+        sourceWalker=sourceWalker._it->next;
     }
 
 

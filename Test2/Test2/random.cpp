@@ -26,9 +26,18 @@ random::random(int lo,int hi)
 
 int random::getRandomNumber()
 {
-    return _randomNumber;
+    return randomize(_lo,_hi);
 }
 
+int random::setLow(int input)
+{
+    _lo=input;
+}
+
+int random::setHigh(int input)
+{
+    _hi=input;
+}
 
 /***********************************
  * Function: Random
