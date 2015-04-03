@@ -123,9 +123,9 @@ void cursoredList<T>::print()
 {
     //list<T>::_printAll();
 
-    Iterator<T> walker=_cursor;
+    node<T>* walker=list<T>::getHead();
 
-    while(isNull()==false)
+    while(walker!=NULL)
     {
 //        if (_cursor==list<T>::getHead())
 //        {
@@ -139,11 +139,16 @@ void cursoredList<T>::print()
 //            list<T>::_print();
 //        }
 
-        if (true)
+        if (walker=_cursor._it)
         {
 
             list<T>::_print();
-            ++walker;
+            walker++;
+        }
+        else
+        {
+            list<T>::_print();
+            walker++;
         }
 
         //have a walker walk along the link-list, and if the
