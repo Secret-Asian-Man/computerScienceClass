@@ -37,7 +37,7 @@ for (int i=0;i<5;i++)
 
 for (int i=0;i<objVector.size();i++)
 {
-    cout<<*objVector[i].number<<endl;
+    cout<<objVector[i].number<<endl;
 }
 
 
