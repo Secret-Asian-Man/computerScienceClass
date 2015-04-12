@@ -1,7 +1,6 @@
 #ifndef ITERATOR_H_INCLUDED
 #define ITERATOR_H_INCLUDED
 #include "node.h"
-#include "linkedlistfunctions.h"
 
 template<typename T>
 class Iterator
@@ -24,8 +23,6 @@ public:
 
     //operators
     bool operator ==(const Iterator& other);
-    bool operator !=(const Iterator& other);
-
     T operator *();
 
     void operator ++();
@@ -81,26 +78,9 @@ bool Iterator<T>::operator ==(const Iterator& other)
 }
 
 template<typename T>
-bool Iterator<T>::operator !=(const Iterator& other)
-{
-    if (_it==other._it)
-    {
-        return false;
-    }
-
-    else
-    {
-        return true;
-    }
-}
-
-
-template<typename T>
 void Iterator<T>:: operator ++()
 {
     _it=_it->next;
 }
-
-
 
 #endif // ITERATOR_H

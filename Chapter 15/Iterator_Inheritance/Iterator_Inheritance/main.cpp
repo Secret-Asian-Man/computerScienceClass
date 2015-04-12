@@ -14,7 +14,7 @@ int main()
 
     while(run)
     {
-        cout<<endl<<endl<<"H: Insert Head | A: Insert After | B: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit"<<endl;
+        cout<<endl<<endl<<"H: Insert Head | A: Insert After | I: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit"<<endl;
         cout<<"Input Command: ";
         cin>>command;
 
@@ -26,8 +26,8 @@ int main()
             test.insertAfter(number);
             break;
 
-        case 'b':
-        case 'B':
+        case 'i':
+        case 'I':
             cout<<"Insert number: "; cin>>number;
             test.insertBefore(number);
             break;
