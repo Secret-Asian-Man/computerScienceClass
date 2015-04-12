@@ -9,15 +9,11 @@ int main()
 
     char command=' ';
     int number=0;
-    bool run=true;
 
 
-    while(run)
+    while(command!='q' || command !='Q')
     {
-        cout<<endl<<endl<<"H: Insert Head | A: Insert After | I: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit"<<endl;
-        cout<<"Input Command: ";
-        cin>>command;
-
+        cout<<"Input Command: ";cin>>command;
         switch (command)
         {
         case 'a':
@@ -30,12 +26,6 @@ int main()
         case 'I':
             cout<<"Insert number: "; cin>>number;
             test.insertBefore(number);
-            break;
-
-        case 'h':
-        case 'H':
-            cout<<"Insert number: "; cin>>number;
-            test.inserthead(number);
             break;
 
         case 'd':
@@ -64,17 +54,9 @@ int main()
             test.cursorRight();
             break;
 
-        case 'q':
-        case 'Q':
-            run=false;
-            break;
-
-
         default:
             cout<<"Invalid key..."<<endl;
-            break;
         }
-        test.print();
 
     }
 

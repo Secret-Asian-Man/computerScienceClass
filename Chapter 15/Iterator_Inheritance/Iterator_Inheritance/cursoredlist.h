@@ -20,9 +20,6 @@ public:
     void fill();
     void cursorLeft();
     void cursorRight();
-    bool isNull();
-
-    void print();
 
     template <typename TT>
     friend std::ostream& operator <<(std::ostream& outs, const Iterator<TT> &printMe);
@@ -36,7 +33,7 @@ private:
 
 
 template <typename T>
-cursoredList<T>::cursoredList():list<T>()
+cursoredList<T>::cursoredList():list<T>(NULL)
 {
     //blank
 }
@@ -51,8 +48,6 @@ template <typename T>
 cursoredList<T>::~cursoredList()
 {
     //    list<T>::~list();
-    cout<<"blah"<<endl;
-
 }
 
 
@@ -77,10 +72,6 @@ void cursoredList<T>::inserthead(T input)
 template <typename T>
 void cursoredList<T>::Delete()
 {
-    if (isNull()==false)
-    {
-        list<T>::_deleteNode(_cursor);
-    }
 
 }
 
@@ -99,7 +90,6 @@ void cursoredList<T>::fill()
 template <typename T>
 void cursoredList<T>::cursorLeft()
 {
-
     _cursor=list<T>::_findPrevious(_cursor);
 }
 
@@ -108,53 +98,6 @@ void cursoredList<T>::cursorRight()
 {
     _cursor._it=_cursor._it->next;
 }
-
-template <typename T>
-bool cursoredList<T>::isNull()
-{
-    if (_cursor._it==NULL)
-        return true;
-    else
-        return false;
-}
-
-template <typename T>
-void cursoredList<T>::print()
-{
-    //list<T>::_printAll();
-
-    Iterator<T> walker=_cursor;
-
-    while(isNull()==false)
-    {
-//        if (_cursor==list<T>::getHead())
-//        {
-//            cout<<" *";
-//            list<T>::_print();
-//            cout<<"* ";
-//        }
-
-//        else
-//        {
-//            list<T>::_print();
-//        }
-
-        if (true)
-        {
-
-            list<T>::_print();
-            ++walker;
-        }
-
-        //have a walker walk along the link-list, and if the
-        //address of the current node is the same as the address
-        //of the iterator, print out brackets.
-
-    }
-
-
-}
-
 
 template <typename TT>
 std::ostream& operator <<(std::ostream& outs, const Iterator<TT> &printMe)
