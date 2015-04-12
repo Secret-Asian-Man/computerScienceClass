@@ -1,0 +1,203 @@
+NULL
+
+
+H: Insert Head | A: Insert After | I: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: h1h2h5h4h6h5
+Insert number: *[1]-> NULL
+
+
+H: Insert Head | A: Insert After | I: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: Insert number: *[2]-> [1]-> NULL
+
+
+H: Insert Head | A: Insert After | I: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: Insert number: *[5]-> [2]-> [1]-> NULL
+
+
+H: Insert Head | A: Insert After | I: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: Insert number: *[4]-> [5]-> [2]-> [1]-> NULL
+
+
+H: Insert Head | A: Insert After | I: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: Insert number: *[6]-> [4]-> [5]-> [2]-> [1]-> NULL
+
+
+H: Insert Head | A: Insert After | I: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: Insert number: *[5]-> [6]-> [4]-> [5]-> [2]-> [1]-> NULL
+
+
+H: Insert Head | A: Insert After | I: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: 6
+[5]-> *[6]-> [4]-> [5]-> [2]-> [1]-> NULL
+
+
+H: Insert Head | A: Insert After | I: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: 6
+[5]-> [6]-> *[4]-> [5]-> [2]-> [1]-> NULL
+
+
+H: Insert Head | A: Insert After | I: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: 6
+[5]-> [6]-> [4]-> *[5]-> [2]-> [1]-> NULL
+
+
+H: Insert Head | A: Insert After | I: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: 6
+[5]-> [6]-> [4]-> [5]-> *[2]-> [1]-> NULL
+
+
+H: Insert Head | A: Insert After | I: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: 6
+[5]-> [6]-> [4]-> [5]-> [2]-> *[1]-> NULL
+
+
+H: Insert Head | A: Insert After | I: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: d
+[5]-> [6]-> [4]-> [5]-> *[2]-> NULL
+
+
+H: Insert Head | A: Insert After | I: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: 4
+[5]-> [6]-> [4]-> *[5]-> [2]-> NULL
+
+
+H: Insert Head | A: Insert After | I: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: 4
+[5]-> [6]-> *[4]-> [5]-> [2]-> NULL
+
+
+H: Insert Head | A: Insert After | I: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: d
+[5]-> [6]-> *[5]-> [2]-> NULL
+
+
+H: Insert Head | A: Insert After | I: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: 4
+[5]-> *[6]-> [5]-> [2]-> NULL
+
+
+H: Insert Head | A: Insert After | I: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: d
+[5]-> *[5]-> [2]-> NULL
+
+
+H: Insert Head | A: Insert After | I: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: d
+[5]-> *[2]-> NULL
+
+
+H: Insert Head | A: Insert After | I: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: d
+*[5]-> NULL
+
+
+H: Insert Head | A: Insert After | I: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: q
+*[5]-> NULL
+blah
+DEBUG: NUMBER IN walker[] TOO BIG/small!
+Press <RETURN> to close this window...
+
+
+
+
+
+
+
+H: Insert Head | A: Insert After | B: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: a9
+Insert number: [4]-> [4]-> [4]-> [4]-> *[1]-> [9]-> NULL
+
+
+H: Insert Head | A: Insert After | B: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: 6
+[4]-> [4]-> [4]-> [4]-> [1]-> *[9]-> NULL
+
+
+H: Insert Head | A: Insert After | B: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: 4
+[4]-> [4]-> [4]-> [4]-> *[1]-> [9]-> NULL
+
+
+H: Insert Head | A: Insert After | B: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: d
+[4]-> [4]-> [4]-> [4]-> *[9]-> NULL
+
+
+H: Insert Head | A: Insert After | B: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: d
+[4]-> [4]-> [4]-> *[4]-> NULL
+
+
+H: Insert Head | A: Insert After | B: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: 44
+[4]-> [4]-> *[4]-> [4]-> NULL
+
+
+H: Insert Head | A: Insert After | B: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: [4]-> *[4]-> [4]-> [4]-> NULL
+
+
+H: Insert Head | A: Insert After | B: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: f
+[2]-> [2]-> [4]-> *[4]-> [4]-> [4]-> NULL
+
+
+H: Insert Head | A: Insert After | B: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: b555
+Insert number: [2]-> [2]-> [4]-> [555]-> *[4]-> [4]-> [4]-> NULL
+
+
+H: Insert Head | A: Insert After | B: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: 4
+[2]-> [2]-> [4]-> *[555]-> [4]-> [4]-> [4]-> NULL
+
+
+H: Insert Head | A: Insert After | B: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: d
+[2]-> [2]-> [4]-> *[4]-> [4]-> [4]-> NULL
+
+
+H: Insert Head | A: Insert After | B: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: d
+[2]-> [2]-> [4]-> *[4]-> [4]-> NULL
+
+
+H: Insert Head | A: Insert After | B: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: d
+[2]-> [2]-> [4]-> *[4]-> NULL
+
+
+H: Insert Head | A: Insert After | B: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: d
+[2]-> [2]-> *[4]-> NULL
+
+
+H: Insert Head | A: Insert After | B: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: d
+[2]-> *[2]-> NULL
+
+
+H: Insert Head | A: Insert After | B: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: d
+*[2]-> NULL
+
+
+H: Insert Head | A: Insert After | B: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command:
+d
+NULL
+
+
+H: Insert Head | A: Insert After | B: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: d
+DEBUG LIST IS EMPTY!!
+NULL
+
+
+H: Insert Head | A: Insert After | B: Insert Before | D: Delete | S: Search | F:Fill | 4: Left | 6: Right | Q: Quit
+Input Command: q
+NULL
+blah
+DEBUG: NUMBER IN walker[] TOO BIG/small!
+Press <RETURN> to close this window...
