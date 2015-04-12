@@ -3,8 +3,7 @@ CONFIG += console
 CONFIG -= app_bundle
 CONFIG -= qt
 
-SOURCES += main.cpp \
-    random.cpp
+SOURCES += main.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
@@ -15,6 +14,5 @@ HEADERS += \
     list.h \
     node.h \
     stack.h \
-    cursoredlist.h \
-    random.h
+    cursoredlist.h
 
