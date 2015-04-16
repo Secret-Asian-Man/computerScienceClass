@@ -1,7 +1,6 @@
 #include "grid.h"
 #include "constants.h"
 #include "iostream"
-#include "testcreature.h"
 #include "walls.h"
 #include "prey.h"
 #include "predator.h"
@@ -29,6 +28,13 @@ grid::grid()
 
 grid::~grid()
 {
+    for (int i=0;i<ROWS;i++)
+    {
+        for (int j=0;j<COLLS;j++)
+        {
+            delete _board[i][j];
+        }
+    }
 
 }
 
@@ -135,23 +141,38 @@ void grid::placeCreature(creature* critter) //places creature in a random empty 
 }
 
 
-void grid::step()
+void grid::step()//move, breed, then starve/die
 {
-    for (int i=1;i<ROWS-1;i++)
+    for (int i=WALL_SIZE;i<ROWS-WALL_SIZE;i++) //accounting for walls
     {
-        for (int j=1;j<COLLS-1;j++)
+        for (int j=WALL_SIZE;j<COLLS-WALL_SIZE;j++)
+        {
+            if (_board[i][j]!=NULL && _board[i][j]->get_hasMoved()==false)
+            {
+
+                //hunters should move before prey
+                _board[i][j]->set_hasMoved(true);
+                _board[i][j]->move(_board); //also contains eat
+
+            }
+
+        }
+    }
+
+    for (int i=WALL_SIZE;i<ROWS-WALL_SIZE;i++) //accounting for walls
+    {
+        for (int j=WALL_SIZE;j<COLLS-WALL_SIZE;j++)
         {
             if (_board[i][j]!=NULL)
             {
-                _board[i][j]->move(_board);//<---@@@@@ problem
-                //_board[i][j]->get_position().print_xy();cout<<endl;
-            }
-            else
-            {
-                    //cout<<"grid step empty : "<<endl;
+
+                _board[i][j]->breed(_board);
+               _board[i][j]->die(_board); //doesn't call any of the 3 different dies?!?!?
             }
         }
     }
+
+    reset();
 
 }
 
@@ -177,4 +198,18 @@ void grid::print()
         cout<<endl;
     }
 
+}
+
+void grid::reset()
+{
+    for (int i=WALL_SIZE;i<ROWS-WALL_SIZE;i++)
+    {
+        for (int j=WALL_SIZE;j<COLLS-WALL_SIZE;j++)
+        {
+            if (_board[i][j]!=NULL)
+            {
+                _board[i][j]->set_hasMoved(false); //has not taken walls into account
+            }
+        }
+    }
 }

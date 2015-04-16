@@ -42,12 +42,11 @@ public:
     friend istream& operator >> (istream &outs, rationalNumbers &ratio);
 
 
-
-
-
 private:
     int _numerator;
     int _denominator;
 };
+
+
 
 #endif // RATIONALNUMBERS_H

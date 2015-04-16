@@ -19,11 +19,12 @@ int main()
         test.step();
 
         test.print();
-        cin.get(); //gets next generation
+        //cin.get(); //gets next generation
+        system("pause");
+
         system("cls"); //clears the screen
 
     }
-
 
 }
 

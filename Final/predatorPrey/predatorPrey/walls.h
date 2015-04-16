@@ -8,7 +8,6 @@ public:
     walls(coords position);
     walls(int x, int y);
 
-    ~walls();
 
 
 

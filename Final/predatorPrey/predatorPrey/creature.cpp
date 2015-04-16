@@ -4,9 +4,9 @@ using namespace std;
 
 creature::creature()
 {
-    _creatureType='NULL';
+    _creatureType=NULL;
     _hasMoved=false;
-    _age=0;
+    _age=1;
 }
 
 creature::creature(char creatureType,coords position,bool hasMoved=false)
@@ -14,7 +14,7 @@ creature::creature(char creatureType,coords position,bool hasMoved=false)
     _creatureType=creatureType;
     _hasMoved=hasMoved;
     _position=position;
-    _age=0;
+    _age=1;
 
 }
 
@@ -23,7 +23,7 @@ creature::creature(char creatureType, int x, int y, bool hasMoved)
     _creatureType=creatureType;
     _hasMoved=hasMoved;
     _position.set_xy(x,y);
-    _age=0;
+    _age=1;
 
 }
 
@@ -45,6 +45,11 @@ coords creature::get_position()
 bool creature::get_hasMoved()
 {
     return _hasMoved;
+}
+
+int creature::get_age()
+{
+    return _age;
 }
 
 
@@ -69,6 +74,11 @@ void creature::set_position(int x, int y)
 
     _position=temp;
 }
+void creature::set_age(int input)
+{
+    _age=input;
+}
+
 
 /***********************************
 * Function:move
@@ -83,81 +93,102 @@ void creature::set_position(int x, int y)
 void creature::move(creature* board[][ROWS]) //creature now knows what the world is because it is passed on in the arguments. Don't forget to check if creature has moved already.
 {
 
-    vector<creature*> possibleMoves=surroundings(board,_position);
+    //cout<<"Original: "; _position.print_xy(); cout<<endl;
 
-    cout<<possibleMoves.size()<<endl;
-    for (int i=0;i<possibleMoves.size();i++)
+    vector<coords> empty=emptySpots(board,_position);
+
+    if (empty.size()>0)
     {
+        random ran1(0,empty.size()-1);
+
+        //            for (int i=0;i<empty.size();i++) //prints out the vector
+        //            {
+
+        //                empty[i].print_xy();
+        //            }
+        //            cout<<endl<<endl;
+
+        //    cout<<empty.size()<<endl;
+
+        //i want to move orignal to random new location, if it hasnt moved already. remember to update coords
+        //0.) if it hasn't moved already
+        //1.) update coords
+        //2.) set moved to true
+        //3.) set random new location to point the original
+        //4.) set original to point to NULL
+
+
+        coords randomCoord(empty[ran1.getRandomNumber()]);
+        //        cout<<"limit: "<<ran1._lo<<"    "<<ran1._hi<<endl;
+        //        cout<<"pick random #: "<<ran1.getRandomNumber()<<endl;
+        coords bank(_position);
+
+        //        cout<<"moving to: "; randomCoord.print_xy(); cout<<endl;
+
+
+        board[randomCoord.get_x()][randomCoord.get_y()]=
+                board[_position.get_x()][_position.get_y()]; //All it does is set random new location to point the original.
+
+        _position=randomCoord; //updates the coords
+
+        board[bank.get_x()][bank.get_y()]=NULL; //sets original to NULL
+
+
+        //        cout<<"moved to: "; randomCoord.print_xy(); cout<<endl;
+
+
+
+
+
+
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //    vector<coords> possibleMoves;
-    //    //make an array of possible moves then pick a random one to move to
-    //    //I want to make a function that takes in the grid, and a coordinate, and returns a vector of possible moves
-    //    for (int i=_position.get_x()-1;i<_position.get_x()+2;i++) //get_x()-1 starts off at row 0 stopping at row 2, because <3
-    //    {
-
-    //        for (int j=_position.get_y()-1;j<_position.get_y()+2;j++)//get_y()-1 starts off at coll 0 stopping at coll 2, because <3
-    //        {
-    //            if (board[i][j]==NULL) //if the spot is empty...
-    //            {
-    //                cout<<"i: "<<i<<", "<<"j: "<<j<<endl;
-    //                possibleMoves.push_back(coords(i,j));//add the coords of that spot to the list
-
-    //            }
-    //            else
-    //            {
-    //                cout<<"Full"<<endl;
-    //            }
-    //        }
-    //    }
-    //    cout<<"possibleMoves.size(): "<<possibleMoves.size()<<endl;
-
-
-    //    for (int i=0;i<possibleMoves.size();i++)
-    //    {
-
-    //      possibleMoves[i].print_xy(); cout<<endl;
-    //    }
-
-
-
-
-    ////    random ran1(0, possibleMoves.size()); //gets a random number from 0 to the size of the vector
-
-    ////    if (board[_position.get_x()][_position.get_y()]->get_hasMoved()==false) //if the creature at that slot hasn't moved yet...
-    ////    {
-    ////        board[_position.get_x()][_position.get_y()]->set_hasMoved(true);//says the creature has moved now
-    ////        board[_position.get_x()][_position.get_y()]->set_position(possibleMoves.at(ran1.getRandomNumber())); //sets the new coordinates
-
-    ////        board[possibleMoves.at(ran1.getRandomNumber()).get_x()][possibleMoves.at(ran1.getRandomNumber()).get_y()]=board[_position.get_x()][_position.get_y()]; //actually moves the creature. Picks a random coord from the vector, and points it to the creature
-    ////        board[_position.get_x()][_position.get_y()]=NULL; //sets the original space to NULL.
-    ////    }
-
+    _age++;
 }
 
 void creature::die(creature* board[][ROWS])
 {
+    //this die function has been called because someone else says it is time to die!
+    //cout<<"11111111111111111"<<endl;
     delete board[_position.get_x()][_position.get_y()];
     board[_position.get_x()][_position.get_y()]=NULL;
+}
+void creature::eat(creature* board[][ROWS], vector<creature *> entities) //calls die and move
+{
+    //scroll through the entire vector for a prey, if there is none move normally, if there is eat it.
+    //Randomize vector?
+
+    //random ran1(0,entities.size()-1);
+
+    for (int i=0;i<entities.size();i++) //going through entire vector
+    {
+        if (entities[i]->get_creatureType()==PREY) //looking for the first prey
+        {
+            coords preyPos(entities[i]->get_position()); //saves the coords of the food
+            coords hunterPos(creature::get_position()); //saves original coords of the hunter
+
+            entities[i]->die(board); //kills the food
+
+
+
+            board[preyPos.get_x()][preyPos.get_y()]=board[hunterPos.get_x()][hunterPos.get_y()];//points dead prey's pointer to hunter now, aka moves hunter to the food's position
+            board[hunterPos.get_x()][hunterPos.get_y()]->set_position(preyPos); //updates the hunter's coordinates
+            board[hunterPos.get_x()][hunterPos.get_y()]=NULL;//sets hunter's previous position to NULL
+
+            i=entities.size(); //after the prey is eaten, stop looking for new ones.
+        }
+    }
+
+
 }
 
 void creature::breed(creature* board[][ROWS])
 {
+
+
+}
+void creature::increment_age()
+{
+    _age=_age+1; //THIS LINE DOESN'T WORK?!?!?!
 
 }
 
@@ -171,30 +202,84 @@ creature& creature::operator =(const creature& other)
 }
 
 //should I return the coords or the creatures? Which is more useful
-vector<creature*> creature::surroundings(creature* board[][ROWS], coords target)
+vector<creature*> creature::surroundings(creature* board[][ROWS], coords target) //for breed/eating
 {
     vector<creature*> temp;
 
-    // (x)(2)+1
-target.print_xy();cout<<endl;
-    for (int i=target.get_x()-RADAR_RANGE;i<target.get_x()+((/*maybe get rid of the *2  */RADAR_RANGE)+1);i++) //get_x()-1 starts off at row 0 stopping at row 2, because <3
+    for (int i=target.get_x()-RADAR_RANGE;i<target.get_x()+((RADAR_RANGE)+1);i++) //get_x()-1 starts off at row 0 stopping at row 2, because <3
+    {
+
+        for (int j=target.get_y()-RADAR_RANGE;j<target.get_y()+((RADAR_RANGE)+1);j++)//get_y()-1 starts off at coll 0 stopping at coll 2, because <3
+        {
+            if (board[i][j]!=NULL && board[i][j]->get_position()!=target) //if the spot is empty...
+            {
+                if (board[i][j]->get_creatureType()!=WALLS)
+                {
+                    temp.push_back(board[i][j]);//add the coords of that spot to the list
+
+                }
+            }
+        }
+    }
+
+    return temp;
+
+    //    vector<creature*> temp;
+
+    //    for (int i=target.get_x()-RADAR_RANGE;i<target.get_x()+((RADAR_RANGE)+1);i++) //get_x()-1 starts off at row 0 stopping at row 2, because <3
+    //    {
+
+    //        for (int j=target.get_y()-RADAR_RANGE;j<target.get_y()+((RADAR_RANGE)+1);j++)//get_y()-1 starts off at coll 0 stopping at coll 2, because <3
+    //        {
+
+    //                if (board[i][j]->get_position()!=target && board[i][j]!=NULL)
+    //                {
+    //                    cout<<"Found, pushing...   ";  board[i][j]->get_position().print_xy();   cout<<endl;
+    //                    temp.push_back(board[i][j]);
+
+    //                }
+    //        }
+    //    }
+
+    //    return temp;
+}
+
+vector<coords> creature::emptySpots(creature* board[][ROWS], coords target) //for moving
+{
+    vector<coords> temp;
+
+    for (int i=target.get_x()-RADAR_RANGE;i<target.get_x()+((RADAR_RANGE)+1);i++) //get_x()-1 starts off at row 0 stopping at row 2, because <3
     {
 
         for (int j=target.get_y()-RADAR_RANGE;j<target.get_y()+((RADAR_RANGE)+1);j++)//get_y()-1 starts off at coll 0 stopping at coll 2, because <3
         {
             if (board[i][j]==NULL) //if the spot is empty...
             {
-                cout<<"pushing back null"<<endl;
-                temp.push_back(NULL);//add the coords of that spot to the list
-            }
-            else
-            {
-                cout<<"Found, pushing...   ";  board[i][j]->get_position().print_xy();   cout<<endl;
-                temp.push_back(board[i][j]);
+                temp.push_back(coords(i,j));//add the coords of that spot to the list
             }
         }
     }
 
-    cout<<"surroundings size: "<<temp.size()<<endl;
     return temp;
 }
+
+//void creature::randomizeVector(vector<creature*> &me)
+//{
+//    random ran1(0,me.size());
+//    random ran2(0,me.size());
+
+//    for (int i=0;i<HOW_RANDOM;i++)
+//    {
+
+//        swap(me[ran1.getRandomNumber()],me[ran2.getRandomNumber()]); //@@@ IT WONT SWAP!!!!!!!
+
+//    }
+
+//    //    for (int i=0;i<me.size();i++) //prints out the vector
+//    //    {
+//    //        cout<<i<<":"<<me[i]<<"  ";
+//    //    }
+//    //cout<<endl<<endl;
+
+//}
+

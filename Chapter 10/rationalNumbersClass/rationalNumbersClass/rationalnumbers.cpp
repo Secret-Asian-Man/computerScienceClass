@@ -169,6 +169,57 @@ void rationalNumbers::printBoth()
     cout<<_numerator<<"/"<<_denominator;
 }
 
+void rationalNumbers::blah()
+{
+
+}
+
+void rationalNumbers::blah1()
+{
+
+}
+
+void rationalNumbers::blah2()
+{
+
+}
+
+void rationalNumbers::blah3()
+{
+
+}
+
+void rationalNumbers::blah4()
+{
+
+}
+
+void rationalNumbers::blah5()
+{
+
+}
+
+void rationalNumbers::blah6()
+{
+
+}
+
+void rationalNumbers::blah7()
+{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /***********************************
  * Function:simplify
  * Purpose: simplifies the ratio

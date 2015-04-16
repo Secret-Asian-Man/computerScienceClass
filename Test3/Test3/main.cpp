@@ -1,43 +1,37 @@
 #include <iostream>
+#include <vector>
+#include <random.h>
+#include <cstdlib>
+#include <time.h>
 
 using namespace std;
 
-const int MAX=100;
 
-void Delete(string* array, int& size);
 
 int main()
 {
+    srand(time(0));
 
-    string array[MAX]={"Hello","blah","bike"};
-    string* test=array;
-    int size=3;
-
-    cout<<"DEBUG test: "<<*test<<endl;
-    cout<<"DEBUG size: "<<size<<endl;
-
-    Delete(test,size);
-    cout<<"DEBUG size: "<<size<<endl;
-
-    Delete(test,size);
-    cout<<"DEBUG size: "<<size<<endl;
-
-    cout<<"DEBUG test: "<<*test<<endl;
-
-}
-void Delete(string* array, int& size)
-
-{
-    string* end=array+size;
-    string* nextPos=array+1; //moves the value from pos+1 into pos
-
-    for (int i=0;i<size;i++)
+    vector<int> test;
+    for (int i=0;i<5;i++)
     {
-        *array=*nextPos;
-
-        array++;
-        nextPos++;
+        test.push_back(i);
     }
 
-    size--;
+    random ran1(0,test.size());
+    random ran2(0,test.size());
+
+
+
+    test.swap(test[2]);
+
+
+    for (int i=0;i<test.size();i++)
+    {
+        cout<<test[i]<<" ";
+    }
+
+    cout<<endl<<endl;
+
+
 }

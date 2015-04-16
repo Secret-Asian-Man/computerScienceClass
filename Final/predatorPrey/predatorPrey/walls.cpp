@@ -11,8 +11,3 @@ walls::walls(int x, int y):creature(WALLS,x,y,true)
 }
 
 
-walls::~walls()
-{
-
-}
-
