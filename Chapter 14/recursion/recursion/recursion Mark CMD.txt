@@ -1,0 +1,106 @@
+printing 512
+5
+1
+2
+Press <RETURN> to close this window...
+
+printing 5
+1
+2
+3
+4
+5
+
+
+Press <RETURN> to close this window...
+
+
+printing 5
+5
+4
+3
+2
+1
+
+
+Press <RETURN> to close this window...
+
+printing 5
+5
+4
+3
+2
+1
+1
+2
+3
+4
+5
+
+
+Press <RETURN> to close this window...
+
+printing 2
+hip
+hip
+hoorah!
+
+
+Press <RETURN> to close this window...
+
+printing 4
+hip
+hip
+hip
+hoorah!
+
+
+Press <RETURN> to close this window...
+
+printing 4
+hoorah!
+hip
+hip
+hip
+
+
+Press <RETURN> to close this window...
+
+printing 4
+hip
+hip
+hip
+hoorah!
+hip
+hip
+hip
+
+
+Press <RETURN> to close this window...
+
+printing 4
+hip
+hip
+hoorah!
+hip
+hip
+
+
+Press <RETURN> to close this window...
+
+
+printing 4
+,
+,
+,
+,
+,
+|
+,
+,
+,
+,
+,
+
+
+Press <RETURN> to close this window...

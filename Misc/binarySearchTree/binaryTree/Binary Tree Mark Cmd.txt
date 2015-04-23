@@ -1,0 +1,4 @@
+DEBUG preOrder: 10 4 5 52 236 410
+DEBUG inorder: 4 5 10 52 236 410
+DEBUG postOrder: 5 4 410 236 52 10
+Press <RETURN> to close this window...

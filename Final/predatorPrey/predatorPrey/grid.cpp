@@ -167,7 +167,7 @@ void grid::step()//move, breed, then starve/die
             {
 
                 _board[i][j]->breed(_board);
-               _board[i][j]->die(_board); //doesn't call any of the 3 different dies?!?!?
+               _board[i][j]->die(_board);
             }
         }
     }

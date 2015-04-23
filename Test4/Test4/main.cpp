@@ -1,52 +1,25 @@
 #include <iostream>
-#include <cstring>
 
 using namespace std;
 
-char* allocate(int size);
+void cstr(string source, char* dest){
 
+    for(int i = 0; i < source.length(); i++){
+        dest[i] = source[i];
+    }
+    dest[source.length()] ='\0';
+}
 
 int main()
 {
-    //    char*s=allocate(100);
+    string testString="blah blah";
 
-    //    strcpy(s, "This is a test!!");
-    //    cout<<s<<endl;
+    char testCString[1000];
 
-
-
+    cstr(testString,testCString);
 
 
 
-    //    for (int i=0;i<100000;i++) //testing allocating space without deleting
-    //    {
-    //        for (int j=0;j<100000;j++)
-    //        {
-    //            char* s=allocate(10000);
-    //            cout<<i<<", "<<j<<endl;
-    //        }
-    //    }
-
-
-
-
-
-
-    for (int i=0;i<100000;i++) //testing allocating space with deleting
-    {
-        for (int j=0;j<100000;j++)
-        {
-            char* s=allocate(100);
-            cout<<i<<", "<<j<<endl;
-            delete[] s; //<=== releases memory
-        }
-    }
-}
-
-char* allocate(int size)
-{
-    char* temp;
-    temp=new char[size];
-
-    return temp;
+    cout<<testString.c_str();
+    cout<<endl;
 }

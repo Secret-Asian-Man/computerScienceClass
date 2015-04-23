@@ -1,37 +1,31 @@
 #include <iostream>
-#include <vector>
-#include <random.h>
-#include <cstdlib>
-#include <time.h>
-
+#include <fstream>
 using namespace std;
 
 
 
 int main()
 {
-    srand(time(0));
+    char singleChar;
 
-    vector<int> test;
-    for (int i=0;i<5;i++)
+    ifstream myStream;
+
+    myStream.open("PacManMap.txt");
+    if (myStream.fail()) //checks file
     {
-        test.push_back(i);
+        cout<<endl<<"****** Could not open file ******"<<endl;
+        exit(0);
     }
+            while(!myStream.eof())
+            {
+                myStream.get(singleChar);
+                if (singleChar==13)
+                {
+                    cout<<endl;
+                }
+                else
+                cout<<singleChar;
+            }
 
-    random ran1(0,test.size());
-    random ran2(0,test.size());
-
-
-
-    test.swap(test[2]);
-
-
-    for (int i=0;i<test.size();i++)
-    {
-        cout<<test[i]<<" ";
-    }
-
-    cout<<endl<<endl;
-
-
+            cout<<endl;
 }
